@@ -1,7 +1,7 @@
-import { createContext } from "react";
 import { ContentComponent } from "../components/content";
 import { HeaderComponent } from "../components/header";
-import { Container, Footer, LeftPanel } from "./styles";
+import { LeftPanelComponent } from "../components/leftPanel";
+import { Container, Footer } from "./styles";
 import { LayoutContextProvider } from "./useLayoutContext";
 
 export const Layout = () => {
@@ -10,7 +10,7 @@ export const Layout = () => {
       <HeaderComponent />
       <LayoutContextProvider>
         <ContentComponent />
-        <LeftPanel>detalle</LeftPanel>
+        <LeftPanelComponent />
       </LayoutContextProvider>
       <Footer>footer</Footer>
     </Container>

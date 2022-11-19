@@ -5,7 +5,6 @@ export interface IUserInformation {
 }
 
 export interface IUserInfoContext {
-  //TODO revisar los tipos
   userInformation: IUserInformation;
-  setUserInformation: (value: string) => void;
+  setUserInformation: (value: IUserInformation) => void;
 }

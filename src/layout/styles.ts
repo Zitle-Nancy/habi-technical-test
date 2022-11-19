@@ -27,15 +27,6 @@ export const Container = styled.main`
   }
 `;
 
-export const LeftPanel = styled.aside`
-  grid-area: leftPanel;
-
-  display: none;
-
-  @media (min-width: 600px) {
-    display: block;
-  }
-`;
 export const Footer = styled.footer`
   grid-area: footer;
 `;
