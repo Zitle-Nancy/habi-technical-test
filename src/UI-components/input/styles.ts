@@ -1,4 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const sharedStyle = css`
+  color: red;
+  font-size: 14px;
+`;
+
+export const Asterisk = styled.span`
+  ${sharedStyle}
+`;
+
+export const ErrorMessage = styled.span`
+  ${sharedStyle}
+`;
 
 export const FormInput = styled.input`
   background: white;
@@ -8,7 +21,7 @@ export const FormInput = styled.input`
   height: 100%;
   outline: none;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Label = styled.label`
@@ -24,4 +37,10 @@ export const Box = styled.div`
   width: 100%;
   margin-bottom: 34px;
   padding-top: 20px;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 `;
