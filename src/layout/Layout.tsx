@@ -1,10 +1,12 @@
-import { Container, Content, Footer, Header, LeftPanel } from "./styles";
+import { ContentComponent } from "../components/content";
+import { HeaderComponent } from "../components/header";
+import { Container, Footer, LeftPanel } from "./styles";
 
 export const Layout = () => {
   return (
     <Container>
-      <Header>habi - steps</Header>
-      <Content>form</Content>
+      <HeaderComponent />
+      <ContentComponent />
       <LeftPanel>detalle</LeftPanel>
       <Footer>footer</Footer>
     </Container>

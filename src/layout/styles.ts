@@ -25,13 +25,6 @@ export const Container = styled.main`
   }
 `;
 
-export const Content = styled.article`
-  grid-area: content;
-`;
-
-export const Header = styled.header`
-  grid-area: header;
-`;
 export const LeftPanel = styled.aside`
   grid-area: leftPanel;
 
