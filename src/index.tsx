@@ -5,6 +5,8 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Layout } from "./layout";
 import { UserData } from "./pages/UserData";
+import { Email } from "./pages/Email";
+import { Address } from "./pages/Address";
 
 const router = createBrowserRouter([
   {
@@ -16,18 +18,20 @@ const router = createBrowserRouter([
         element: <UserData />,
       },
       {
-        path: "/email",
+        path: "email",
+        element: <Email />,
       },
       {
-        path: "/address",
+        path: "address",
+        element: <Address />,
       },
       {
-        path: "/floor-number",
+        path: "floor-number",
       },
       {
-        path: "/amenities",
+        path: "amenities",
       },
-      { path: "/details" },
+      { path: "details" },
     ],
   },
 ]);
