@@ -1,8 +1,20 @@
-import { useForm, useFormState } from "react-hook-form";
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
+import { IUserInfoContext } from "../../layout/types";
+import { Context } from "../../layout/useLayoutContext";
 
 import { Input } from "../../UI-components/input";
 
 export const UserData = () => {
+  const { userInformation, setUserInformation } = useContext(
+    Context
+  ) as IUserInfoContext;
+  console.log(
+    userInformation,
+    "setUserInformation ->",
+    setUserInformation,
+    "userInformation en user data"
+  );
   const { register, handleSubmit, setValue } = useForm();
 
   const formInputProps = {
