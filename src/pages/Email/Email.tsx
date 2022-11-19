@@ -2,7 +2,7 @@ import { useForm, useFormState } from "react-hook-form";
 
 import { Input } from "../../UI-components/input";
 
-export const UserData = () => {
+export const Email = () => {
   const { register, handleSubmit, setValue } = useForm();
 
   const formInputProps = {
@@ -13,10 +13,10 @@ export const UserData = () => {
   return (
     <form>
       <Input
-        name="userName"
-        placeholder="Nombre completo"
+        name="email"
+        placeholder="Escribe tu correo electrónico"
         type="text"
-        label="Nombre completo"
+        label="Correo electrónico"
         handleOnChange={() => ""}
         {...formInputProps}
       />
