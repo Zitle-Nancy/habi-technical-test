@@ -5,6 +5,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Layout } from "./layout";
 import { DataForm } from "./pages/dataForm";
+import { AmenitiesForm } from "./pages/amenitiesForm";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "amenities",
+        element: <AmenitiesForm />,
       },
       { path: "details" },
     ],
