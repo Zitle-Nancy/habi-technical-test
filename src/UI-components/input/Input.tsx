@@ -6,7 +6,6 @@ import { Asterisk, Box, ErrorMessage, Flex, FormInput, Label } from "./styles";
 interface IFormInput {
   label: string;
   type: string;
-  handleOnChange: () => void;
   placeholder: string;
   name: string;
   register?: UseFormRegister<any> | null;
@@ -17,15 +16,14 @@ interface IFormInput {
 export const Input = ({
   label,
   type,
-  handleOnChange,
   placeholder,
   name,
   register = null,
-  defaultValue = "",
   required = false,
 }: IFormInput) => {
-  const [value, setValue] = useState(defaultValue);
-  console.log(value, "value");
+  // const [value, setValue] = useState("");
+
+  // console.log(name, "name");
 
   return (
     <Box>
@@ -34,14 +32,18 @@ export const Input = ({
       </Label>
       <Flex>
         <FormInput
+          id={name}
           placeholder={placeholder}
-          value={value}
+          // value={value}
           type={type}
           {...(register &&
             register(name, {
               required: { value: required, message: "Campo requerido" },
-              onChange: (e: ChangeEvent<HTMLInputElement>) =>
-                setValue(e.target.value),
+              // onChange: (e: ChangeEvent<HTMLInputElement>) => {
+              //   console.log(e, "event");
+
+              //   // setValue(e.target.value);
+              // },
             }))}
         />
         {false && <ErrorMessage>Error</ErrorMessage>}
