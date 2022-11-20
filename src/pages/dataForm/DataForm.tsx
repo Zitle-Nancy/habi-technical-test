@@ -33,6 +33,7 @@ export const DataForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      {/* TODO change name by registerName */}
       <Input
         name={INPUT_VALUES[pathname].name}
         placeholder={INPUT_VALUES[pathname].placeholder}

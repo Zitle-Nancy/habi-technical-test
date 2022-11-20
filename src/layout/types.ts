@@ -7,7 +7,7 @@ export interface IUserInformation {
   email: string;
   address: string;
   floorNumber: string;
-  amenities: IAmenities[];
+  amenities?: IAmenities;
 }
 
 export interface IUserInfoContext {

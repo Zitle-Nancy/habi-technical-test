@@ -1,4 +1,6 @@
-export const AMENITIES_OPTIONS = [
+import { IAmenitiesOptions } from "./types";
+
+export const AMENITIES_OPTIONS: IAmenitiesOptions[] = [
   {
     id: "zonaBBQ",
     name: "Zona BBQ",
@@ -11,7 +13,7 @@ export const AMENITIES_OPTIONS = [
   },
   {
     id: "playground",
-    name: "Salón comunal",
+    name: "Parque de juegos",
     isThere: false,
   },
 ];

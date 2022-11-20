@@ -8,7 +8,6 @@ export const USER_INFORMATION: IUserInformation = {
   email: "",
   address: "",
   floorNumber: "",
-  amenities: [{ id: "", name: "", isThere: false }],
 };
 
 export const LayoutContextProvider = ({
