@@ -7,6 +7,7 @@ export const USER_INFORMATION = {
   fullName: "",
   email: "",
   address: "",
+  floorNumber: "",
 };
 
 export const LayoutContextProvider = ({

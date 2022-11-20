@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Layout } from "./layout";
-import { UserDataForm } from "./pages/userDataForm";
+import { DataForm } from "./pages/dataForm";
 
 const router = createBrowserRouter([
   {
@@ -13,18 +13,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "fullName",
-        element: <UserDataForm />,
+        element: <DataForm />,
       },
       {
         path: "email",
-        element: <UserDataForm />,
+        element: <DataForm />,
       },
       {
         path: "address",
-        element: <UserDataForm />,
+        element: <DataForm />,
       },
       {
         path: "floor-number",
+        element: <DataForm />,
       },
       {
         path: "amenities",

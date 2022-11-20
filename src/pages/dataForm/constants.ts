@@ -17,6 +17,12 @@ export const INPUT_VALUES: IInputValues = {
     name: "address",
     placeholder: "Dirección",
     label: "Escribe tu dirección",
+    nextPath: "/floor-number",
+  },
+  "/floor-number": {
+    name: "floorNumber",
+    placeholder: "Número de piso",
+    label: "Escribe el número del piso donde se encuentra tu departamento",
     nextPath: "/",
   },
 };
