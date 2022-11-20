@@ -13,8 +13,6 @@ export const Checkbox = ({ textLabel = "" }: { textLabel: string }) => {
     setChecked(event.target.checked);
   };
 
-  console.log(checked, "checked");
-
   return (
     <label>
       <CheckboxContainer>
