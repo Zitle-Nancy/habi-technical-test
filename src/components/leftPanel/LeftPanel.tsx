@@ -1,21 +1,16 @@
 import { useContext } from "react";
-import { IAmenities, IUserInfoContext } from "../../layout/types";
+
+import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
+import { useLeftPanel } from "./useLeftPanel";
 import { LeftPanel } from "./styles";
 
-const amenidades = ["Zona BBQ", "Salón comunal", "Parque de juegos"];
 export const LeftPanelComponent = () => {
   const {
     userInformation: { fullName, address, email, floorNumber, amenities },
   } = useContext(Context) as IUserInfoContext;
 
-  const amenidadesTest = amenidades.filter(
-    (amenidad: string, index: number) => {
-      return amenities && amenities[amenidad] !== false;
-    }
-  );
-
-  console.log(amenidadesTest, "amenidadesTest");
+  const { availableAmenities } = useLeftPanel(amenities);
 
   return (
     <LeftPanel>
@@ -26,8 +21,8 @@ export const LeftPanelComponent = () => {
       {floorNumber && <p>piso del departamento: {floorNumber}</p>}
       {amenities && (
         <>
-          {amenidadesTest.map((amenidad) => {
-            return <p key={amenidad}>{amenidad}</p>;
+          {availableAmenities.map((availableAmenity) => {
+            return <p key={availableAmenity}>✔️ {availableAmenity}</p>;
           })}
         </>
       )}

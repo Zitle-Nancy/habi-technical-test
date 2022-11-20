@@ -1,5 +1,10 @@
 export interface IAmenitiesOptions {
   id: string;
   name: string;
-  isThere: boolean;
+}
+
+export enum AmenitiesEnum {
+  ONE = "Zona BBQ",
+  TWO = "Salón comunal",
+  THREE = "Parque de juegos",
 }

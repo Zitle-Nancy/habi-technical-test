@@ -1,6 +1,5 @@
-import { ChangeEvent, FormEvent, useContext } from "react";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
 
 import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
@@ -25,7 +24,7 @@ export const AmenitiesForm = () => {
         Por favor, selecciona si el apartamento tiene alguna de las siguientes
         opciones:
       </h1>
-      {AMENITIES_OPTIONS.map((amenity: any, index: number) => {
+      {AMENITIES_OPTIONS.map((amenity: IAmenitiesOptions, index: number) => {
         return (
           <Checkbox
             register={register}
