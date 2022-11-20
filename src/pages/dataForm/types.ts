@@ -1,4 +1,4 @@
-export interface IUserDataForm {
+export interface IDataForm {
   name: string; // este name es del input
   placeholder: string;
   label: string;
@@ -6,5 +6,5 @@ export interface IUserDataForm {
 }
 
 export interface IInputValues {
-  [key: string]: IUserDataForm;
+  [key: string]: IDataForm;
 }

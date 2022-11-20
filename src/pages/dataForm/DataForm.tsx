@@ -7,7 +7,7 @@ import { Context } from "../../layout/useLayoutContext";
 import { Input } from "../../UI-components/input";
 import { INPUT_VALUES } from "./constants";
 
-export const UserDataForm = () => {
+export const DataForm = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
