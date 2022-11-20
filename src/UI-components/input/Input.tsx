@@ -22,9 +22,6 @@ export const Input = ({
   required = false,
 }: IFormInput) => {
   // const [value, setValue] = useState("");
-
-  // console.log(name, "name");
-
   return (
     <Box>
       <Label>

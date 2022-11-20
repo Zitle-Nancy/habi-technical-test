@@ -10,10 +10,6 @@ const TYPE_OF_AMENITIES = [
 export const useLeftPanel = (amenities: IAmenities | undefined) => {
   const availableAmenities = TYPE_OF_AMENITIES.filter(
     (amenityAvailable: string) => {
-      console.log(amenityAvailable, "amenityAvailable");
-
-      console.log(amenities && "el booleano de" + amenities[amenityAvailable]);
-
       return (
         amenities &&
         amenities[amenityAvailable] !== false &&
