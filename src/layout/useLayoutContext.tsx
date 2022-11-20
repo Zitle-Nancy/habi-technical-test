@@ -3,7 +3,7 @@ import { IUserInformation } from "./types";
 
 export const Context = createContext({});
 
-export const USER_INFORMATION = {
+export const USER_INFORMATION: IUserInformation = {
   fullName: "",
   email: "",
   address: "",
