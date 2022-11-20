@@ -5,15 +5,13 @@ import { LeftPanel } from "./styles";
 
 export const LeftPanelComponent = () => {
   const {
-    userInformation,
-    userInformation: { name, address, email },
+    userInformation: { fullName, address, email },
   } = useContext(Context) as IUserInfoContext;
-  console.log(userInformation, "userInformation");
 
   return (
     <LeftPanel>
       <h1>Resumen</h1>
-      {name && <p>Nombre: {name}</p>}
+      {fullName && <p>Nombre: {fullName}</p>}
       {address && <p>address: {address}</p>}
       {email && <p>email: {email}</p>}
     </LeftPanel>

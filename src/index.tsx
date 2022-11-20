@@ -4,9 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Layout } from "./layout";
-import { UserData } from "./pages/UserData";
-import { Email } from "./pages/Email";
-import { Address } from "./pages/Address";
+import { UserDataForm } from "./pages/userDataForm";
 
 const router = createBrowserRouter([
   {
@@ -14,16 +12,16 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "user-data",
-        element: <UserData />,
+        path: "fullName",
+        element: <UserDataForm />,
       },
       {
         path: "email",
-        element: <Email />,
+        element: <UserDataForm />,
       },
       {
         path: "address",
-        element: <Address />,
+        element: <UserDataForm />,
       },
       {
         path: "floor-number",

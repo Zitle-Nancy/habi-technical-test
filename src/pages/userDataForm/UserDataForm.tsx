@@ -1,44 +1,43 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
-
 import { Input } from "../../UI-components/input";
+import { INPUT_VALUES } from "./constants";
 
-export const UserData = () => {
+export const UserDataForm = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const { register, handleSubmit, reset } = useForm();
+
   const { userInformation, setUserInformation } = useContext(
     Context
   ) as IUserInfoContext;
-
-  console.log(
-    userInformation,
-    "setUserInformation ->",
-    setUserInformation,
-    "userInformation en user data"
-  );
-
-  const { register, handleSubmit } = useForm<{ userName: string }>();
 
   const formInputProps = {
     register,
     required: true,
   };
 
-  const onSubmit = ({ userName }: { userName: string }) => {
-    setUserInformation({ ...userInformation, name: userName });
-    navigate("/email");
+  const onSubmit = (data: any) => {
+    setUserInformation({
+      ...userInformation,
+      [INPUT_VALUES[pathname].name]: data[INPUT_VALUES[pathname].name],
+    });
+    navigate(INPUT_VALUES[pathname].nextPath);
+    reset();
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Input
-        name="userName"
-        placeholder="Nombre completo"
+        name={INPUT_VALUES[pathname].name}
+        placeholder={INPUT_VALUES[pathname].placeholder}
         type="text"
-        label="Nombre completo"
-        handleOnChange={() => ""}
+        label={INPUT_VALUES[pathname].label}
         {...formInputProps}
       />
       <button type="submit">next</button>
