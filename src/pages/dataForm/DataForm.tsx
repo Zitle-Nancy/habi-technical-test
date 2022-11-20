@@ -40,7 +40,7 @@ export const DataForm = () => {
         label={INPUT_VALUES[pathname].label}
         {...formInputProps}
       />
-      <button type="submit">next</button>
+      <button type="submit">Sigamos</button>
     </form>
   );
 };
