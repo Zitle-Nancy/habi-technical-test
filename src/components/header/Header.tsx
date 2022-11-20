@@ -1,5 +1,10 @@
+import { Step } from "../step";
 import { Header } from "./styles";
 
 export const HeaderComponent = () => {
-  return <Header>holis otra vez</Header>;
+  return (
+    <Header>
+      <Step />
+    </Header>
+  );
 };
