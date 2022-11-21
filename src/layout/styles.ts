@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  padding: 1rem;
+  padding: 2rem 3.75rem;
   box-sizing: border-box;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
 
   height: 100vh;
 
