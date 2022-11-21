@@ -6,17 +6,19 @@ import { useLeftPanel } from "./useLeftPanel";
 import { LeftPanel } from "./styles";
 import { Typography } from "../../UI-components";
 
-export const LeftPanelComponent = () => {
+export const LeftPanelComponent = ({
+  isExtended,
+}: {
+  isExtended?: boolean;
+}) => {
   const {
     userInformation: { fullName, address, email, floorNumber, amenities },
   } = useContext(Context) as IUserInfoContext;
 
   const { availableAmenities } = useLeftPanel(amenities);
 
-  console.log(amenities, "amenities");
-
   return (
-    <LeftPanel>
+    <LeftPanel isExtended={isExtended}>
       <Typography
         color="#9634ff"
         fontWeight="600"
