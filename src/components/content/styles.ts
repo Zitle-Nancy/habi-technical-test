@@ -10,12 +10,22 @@ export const Flex = styled.div`
 `;
 
 export const ContainerHeroContent = styled(Flex)`
-  margin-top: 40px;
-  margin-left: 89px;
+  margin: 1rem;
+  max-width: 500px;
+
+  @media (min-width: 900px) {
+    margin-top: 40px;
+    margin-left: 89px;
+  }
 `;
 
 export const WelcomeContainer = styled.div`
   display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  flex-direction: column-reverse;
+
   background: linear-gradient(
     66.92deg,
     rgb(99, 1, 204) 35.98%,
@@ -27,9 +37,18 @@ export const WelcomeContainer = styled.div`
   height: fit-content;
   width: auto;
   margin-bottom: 2rem;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    max-height: 400px;
+  }
 `;
 
 export const HeroImage = styled.img`
-  width: 350px;
+  width: auto;
   height: auto;
+
+  @media (min-width: 900px) {
+    width: 500px;
+  }
 `;

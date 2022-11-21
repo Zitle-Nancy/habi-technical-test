@@ -22,7 +22,7 @@ export const ButtonForm = styled.button<{ borderRadius?: string }>(
   font-size: 16px;
   line-height: 19px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 900px) {
     width: 45%;
   }
 `
