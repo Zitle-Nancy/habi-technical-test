@@ -8,7 +8,7 @@ import { Typography } from "../../UI-components";
 import { Button } from "../../UI-components/button";
 import { Checkbox } from "../../UI-components/checkbox";
 import { AMENITIES_OPTIONS } from "./constants";
-import { Flex, Wrapper } from "./styles";
+import { Flex, Form, Wrapper } from "./styles";
 import { IAmenitiesOptions } from "./types";
 
 export const AmenitiesForm = () => {
@@ -25,7 +25,7 @@ export const AmenitiesForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} style={{ margin: "1rem 5rem" }}>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <Typography
         display="block"
         margin="0 0 0.75rem 0"
@@ -53,6 +53,6 @@ export const AmenitiesForm = () => {
         </Flex>
         <Button type="submit" text="Ver resumen →" borderRadius="8px" />
       </Wrapper>
-    </form>
+    </Form>
   );
 };

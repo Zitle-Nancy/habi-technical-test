@@ -5,7 +5,7 @@ export const HabbiTypography = styled.p<ITypography>(
   (props) => `
   color: ${props.color ? props.color : "black"};
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: ${props.fontWeight ? props.fontWeight : "normal"};
   letter-spacing: normal;
@@ -13,7 +13,7 @@ export const HabbiTypography = styled.p<ITypography>(
   margin: ${props.margin ? props.margin : "0"};
   display: ${props.display ? props.display : "inline"};
 
-  @media (min-width: 600px) {
+  @media (min-width: 900px) {
     font-size: ${props.fontSize};
   }
 `
