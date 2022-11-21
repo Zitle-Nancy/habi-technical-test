@@ -1,6 +1,6 @@
 # Prueba técnica de Habi
 
-Accede al siguiente [link](https://habi-technical-test-jvqhhh39o-nancy.vercel.app/) para verlo en producción.
+Accede al siguiente [link](https://habi-technical-test-nancy.vercel.app/) para verlo en producción.
 
 ## Dependencias
 
