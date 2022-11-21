@@ -12,10 +12,13 @@ export const Flex = styled.div`
 export const ContainerHeroContent = styled(Flex)`
   margin-top: 40px;
   margin-left: 89px;
+  max-width: 500px;
 `;
 
 export const WelcomeContainer = styled.div`
   display: flex;
+  justify-content: space-between;
+
   background: linear-gradient(
     66.92deg,
     rgb(99, 1, 204) 35.98%,
@@ -25,6 +28,7 @@ export const WelcomeContainer = styled.div`
   border-radius: 16px;
 
   height: fit-content;
+  max-height: 400px;
   width: auto;
   margin-bottom: 2rem;
 `;
@@ -32,4 +36,8 @@ export const WelcomeContainer = styled.div`
 export const HeroImage = styled.img`
   width: 350px;
   height: auto;
+
+  @media (min-width: 600px) {
+    width: 500px;
+  }
 `;

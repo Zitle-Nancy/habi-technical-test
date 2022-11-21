@@ -7,11 +7,12 @@ import { Context } from "../../layout/useLayoutContext";
 import { Button } from "../../UI-components/button";
 import { Input } from "../../UI-components/input";
 import { INPUT_VALUES } from "./constants";
-import { Wrapper } from "./styles";
+import { Wrapper, Form } from "./styles";
 
 export const DataForm = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const CUSTOM_WIDTH_FORM = pathname === "/fullname";
 
   const { register, handleSubmit, reset } = useForm();
 
@@ -34,8 +35,7 @@ export const DataForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} style={{ margin: "1rem 5rem" }}>
-      {/* //TODO change name by registerName */}
+    <Form onSubmit={handleSubmit(onSubmit)} width={CUSTOM_WIDTH_FORM}>
       <Wrapper>
         <Input
           name={INPUT_VALUES[pathname].name}
@@ -46,6 +46,6 @@ export const DataForm = () => {
         />
         <Button type="submit" text="Sigamos →" borderRadius="8px" />
       </Wrapper>
-    </form>
+    </Form>
   );
 };
