@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 import { Content } from "./styles";
+import { WelcomeComponent } from "./WelcomeComponent";
+
 export const ContentComponent = () => {
+  const { pathname } = useLocation();
   return (
-    <Content>
-      <Outlet />
-    </Content>
+    <Content>{pathname === "/" ? <WelcomeComponent /> : <Outlet />}</Content>
   );
 };
