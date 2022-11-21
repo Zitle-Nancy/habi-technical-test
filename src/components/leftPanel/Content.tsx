@@ -23,6 +23,14 @@ export const Content = () => {
       >
         RESUMEN
       </Typography>
+      <Typography
+        color="#9634ff"
+        fontSize="16px"
+        display="block"
+        margin="1rem 0 2rem 0"
+      >
+        Aquí podrás ir visualizando los datos que vayas ingresando.
+      </Typography>
       {fullName && (
         <Typography
           color="#6d6970"
