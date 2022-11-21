@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { LeftPanelComponent } from "../../components/leftPanel";
-import { ModalComponent } from "../../UI-components/modal";
+import { ModalComponent } from "../../UI-components";
 
 export const Details = () => {
   const { pathname } = useLocation();

@@ -5,8 +5,7 @@ import {
   WelcomeContainer,
 } from "./styles";
 import Image from "../../images/header_image.webp";
-import { Typography } from "../../UI-components";
-import { Button } from "../../UI-components/button";
+import { Typography, Button } from "../../UI-components";
 
 import { useNavigate } from "react-router-dom";
 

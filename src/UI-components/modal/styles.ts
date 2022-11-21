@@ -1,4 +1,3 @@
-import { Button } from "./../button/Button";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
