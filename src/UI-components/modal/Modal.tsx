@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "react-modal";
-import { Content } from "../../components/leftPanel/Content";
+import { Content } from "../../components/detailsPanel/Content";
 import { Button } from "../button";
 import { Wrapper, CloseButton, ContainerModal } from "./styles";
 
@@ -25,6 +25,7 @@ export const ModalComponent = () => {
   const toggleModal = () => {
     setIsOpen(!modalIsOpen);
   };
+
   return (
     <ContainerModal>
       <Button onClick={toggleModal} text="Resumen" width="100%" {...styles} />

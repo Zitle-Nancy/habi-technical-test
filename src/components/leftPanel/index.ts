@@ -1,1 +1,0 @@
-export { LeftPanelComponent } from "./LeftPanel";

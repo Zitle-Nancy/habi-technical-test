@@ -1,4 +1,3 @@
-// TODO add the amenities values
 export interface IAmenities {
   [key: string]: boolean | string;
 }

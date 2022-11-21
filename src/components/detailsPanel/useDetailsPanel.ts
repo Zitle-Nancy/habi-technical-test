@@ -7,7 +7,7 @@ const TYPE_OF_AMENITIES = [
   AmenitiesEnum.THREE,
 ];
 
-export const useLeftPanel = (amenities: IAmenities | undefined) => {
+export const useDetailsPanel = (amenities: IAmenities | undefined) => {
   const availableAmenities = TYPE_OF_AMENITIES.filter(
     (amenityAvailable: string) => {
       return amenities && amenities[amenityAvailable] !== false;

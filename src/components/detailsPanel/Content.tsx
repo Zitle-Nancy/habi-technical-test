@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
-import { useLeftPanel } from "./useLeftPanel";
+import { useDetailsPanel } from "./useDetailsPanel";
 import { Typography } from "../../UI-components";
 
 export const Content = () => {
@@ -10,7 +10,7 @@ export const Content = () => {
     userInformation: { fullName, address, email, floorNumber, amenities },
   } = useContext(Context) as IUserInfoContext;
 
-  const { availableAmenities } = useLeftPanel(amenities);
+  const { availableAmenities } = useDetailsPanel(amenities);
 
   return (
     <>
