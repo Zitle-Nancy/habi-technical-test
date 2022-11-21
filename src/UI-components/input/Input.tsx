@@ -1,7 +1,8 @@
 import { ChangeEvent, useState } from "react";
 import { UseFormRegister } from "react-hook-form";
+import { Typography } from "../Typography";
 
-import { Asterisk, Box, ErrorMessage, Flex, FormInput, Label } from "./styles";
+import { Asterisk, Box, ErrorMessage, Flex, FormInput } from "./styles";
 
 interface IFormInput {
   label: string;
@@ -24,9 +25,16 @@ export const Input = ({
   // const [value, setValue] = useState("");
   return (
     <Box>
-      <Label>
+      <Typography
+        display="block"
+        margin="0 0 0.75rem 0"
+        fontWeight="400"
+        fontSize="1rem"
+        color="#252129"
+      >
         {label} {required && <Asterisk>*</Asterisk>}
-      </Label>
+      </Typography>
+
       <Flex>
         <FormInput
           id={name}
