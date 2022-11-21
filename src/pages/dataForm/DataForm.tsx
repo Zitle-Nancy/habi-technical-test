@@ -6,8 +6,9 @@ import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
 import { Button } from "../../UI-components/button";
 import { Input } from "../../UI-components/input";
+import { ModalComponent } from "../../UI-components/modal";
 import { INPUT_VALUES } from "./constants";
-import { Wrapper, Form } from "./styles";
+import { Wrapper, Form, FormContainer } from "./styles";
 
 export const DataForm = () => {
   const navigate = useNavigate();
@@ -35,17 +36,20 @@ export const DataForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} width={CUSTOM_WIDTH_FORM}>
-      <Wrapper>
-        <Input
-          name={INPUT_VALUES[pathname].name}
-          placeholder={INPUT_VALUES[pathname].placeholder}
-          type="text"
-          label={INPUT_VALUES[pathname].label}
-          {...formInputProps}
-        />
-        <Button type="submit" text="Sigamos →" borderRadius="8px" />
-      </Wrapper>
-    </Form>
+    <FormContainer>
+      <Form onSubmit={handleSubmit(onSubmit)} width={CUSTOM_WIDTH_FORM}>
+        <Wrapper>
+          <Input
+            name={INPUT_VALUES[pathname].name}
+            placeholder={INPUT_VALUES[pathname].placeholder}
+            type="text"
+            label={INPUT_VALUES[pathname].label}
+            {...formInputProps}
+          />
+          <Button type="submit" text="Sigamos →" borderRadius="8px" />
+        </Wrapper>
+      </Form>
+      <ModalComponent />
+    </FormContainer>
   );
 };

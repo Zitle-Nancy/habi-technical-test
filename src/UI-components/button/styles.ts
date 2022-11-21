@@ -1,9 +1,16 @@
 import styled from "styled-components";
 
-export const ButtonForm = styled.button<{ borderRadius?: string }>(
+interface IButtonFormStyles {
+  borderRadius?: string;
+  width?: string;
+  color?: string;
+  background?: string;
+}
+
+export const ButtonForm = styled.button<IButtonFormStyles>(
   (props) => `
-  background-color: #7c01ff;
-  color: #ffffff;
+  background-color: ${props.background ? props.background : "#7c01ff"} ;
+  color: ${props.color ? props.color : "#ffffff"} ;
   outline: none;
   border: 2px solid #7c01ff;
   cursor: pointer;
@@ -13,7 +20,7 @@ export const ButtonForm = styled.button<{ borderRadius?: string }>(
   font-style: normal;
   font-weight: 400;
   box-sizing: border-box;
-  width: 75%;
+  width: ${props.width ? props.width : "100%"};
   border-radius: ${props.borderRadius ? props.borderRadius : "100px"};
 
   gap: 8px;
@@ -23,7 +30,7 @@ export const ButtonForm = styled.button<{ borderRadius?: string }>(
   line-height: 19px;
 
   @media (min-width: 900px) {
-    width: 45%;
+    width: ${props.width ? props.width : "45%"};
   }
 `
 );

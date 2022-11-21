@@ -5,6 +5,9 @@ interface IButton {
   type?: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
   borderRadius?: string;
+  width?: string;
+  color?: string;
+  background?: string;
 }
 
 export const Button = ({
@@ -12,9 +15,18 @@ export const Button = ({
   type = "button",
   onClick,
   borderRadius,
+  width,
+  color,
+  background,
 }: IButton) => {
+  const styles = {
+    borderRadius,
+    width,
+    color,
+    background,
+  };
   return (
-    <ButtonForm type={type} onClick={onClick} borderRadius={borderRadius}>
+    <ButtonForm type={type} onClick={onClick} {...styles}>
       {text}
     </ButtonForm>
   );

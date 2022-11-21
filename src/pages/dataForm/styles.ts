@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const FormContainer = styled.div`
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 export const Form = styled.form<{ width?: boolean }>(
   (props) => `
   margin: 0;
