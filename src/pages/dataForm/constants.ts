@@ -22,7 +22,7 @@ export const INPUT_VALUES: IInputValues = {
   "/floor-number": {
     name: "floorNumber",
     placeholder: "Número de piso",
-    label: "Escribe el número del piso donde se encuentra tu departamento",
+    label: "Escribe el Nº de piso donde se encuentra el departamento",
     nextPath: "/amenities",
   },
 };

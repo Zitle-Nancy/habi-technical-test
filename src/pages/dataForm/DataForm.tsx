@@ -7,6 +7,7 @@ import { Context } from "../../layout/useLayoutContext";
 import { Button } from "../../UI-components/button";
 import { Input } from "../../UI-components/input";
 import { INPUT_VALUES } from "./constants";
+import { Wrapper } from "./styles";
 
 export const DataForm = () => {
   const navigate = useNavigate();
@@ -33,16 +34,18 @@ export const DataForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {/* TODO change name by registerName */}
-      <Input
-        name={INPUT_VALUES[pathname].name}
-        placeholder={INPUT_VALUES[pathname].placeholder}
-        type="text"
-        label={INPUT_VALUES[pathname].label}
-        {...formInputProps}
-      />
-      <Button type="submit" text="Sigamos →" />
+    <form onSubmit={handleSubmit(onSubmit)} style={{ margin: "1rem 5rem" }}>
+      {/* //TODO change name by registerName */}
+      <Wrapper>
+        <Input
+          name={INPUT_VALUES[pathname].name}
+          placeholder={INPUT_VALUES[pathname].placeholder}
+          type="text"
+          label={INPUT_VALUES[pathname].label}
+          {...formInputProps}
+        />
+        <Button type="submit" text="Sigamos →" borderRadius="8px" />
+      </Wrapper>
     </form>
   );
 };

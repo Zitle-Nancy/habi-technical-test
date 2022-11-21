@@ -4,6 +4,7 @@ import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
 import { useLeftPanel } from "./useLeftPanel";
 import { LeftPanel } from "./styles";
+import { Typography } from "../../UI-components";
 
 export const LeftPanelComponent = () => {
   const {
@@ -12,17 +13,97 @@ export const LeftPanelComponent = () => {
 
   const { availableAmenities } = useLeftPanel(amenities);
 
+  console.log(amenities, "amenities");
+
   return (
     <LeftPanel>
-      <h1>Resumen</h1>
-      {fullName && <p>Nombre: {fullName}</p>}
-      {email && <p>email: {email}</p>}
-      {address && <p>address: {address}</p>}
-      {floorNumber && <p>piso del departamento: {floorNumber}</p>}
-      {amenities && (
+      <Typography
+        color="#9634ff"
+        fontWeight="600"
+        fontSize="22px"
+        display="block"
+        margin="0 0 2rem 0"
+      >
+        RESUMEN
+      </Typography>
+      {fullName && (
+        <Typography
+          color="#6d6970"
+          fontSize="20px"
+          fontWeight="bold"
+          margin="0 0 1rem 0"
+          display="block"
+        >
+          Nombre:{" "}
+          <Typography color="#6d6970" fontSize="20px">
+            {fullName}
+          </Typography>
+        </Typography>
+      )}
+      {email && (
+        <Typography
+          color="#6d6970"
+          fontSize="20px"
+          fontWeight="bold"
+          display="block"
+          margin="0 0 1rem 0"
+        >
+          Email:{" "}
+          <Typography color="#6d6970" fontSize="20px">
+            {email}
+          </Typography>
+        </Typography>
+      )}
+      {address && (
+        <Typography
+          color="#6d6970"
+          fontSize="20px"
+          fontWeight="bold"
+          display="block"
+          margin="0 0 1rem 0"
+        >
+          Dirección:{" "}
+          <Typography color="#6d6970" fontSize="20px">
+            {address}
+          </Typography>
+        </Typography>
+      )}
+      {floorNumber && (
+        <Typography
+          color="#6d6970"
+          fontSize="20px"
+          fontWeight="bold"
+          display="block"
+          margin="0 0 1rem 0"
+        >
+          Nº de piso del departamento:{" "}
+          <Typography color="#6d6970" fontSize="20px">
+            {floorNumber}
+          </Typography>
+        </Typography>
+      )}
+      {!!availableAmenities.length && (
         <>
+          <Typography
+            color="#6d6970"
+            fontSize="20px"
+            fontWeight="bold"
+            margin="0 0 1rem 0"
+            display="block"
+          >
+            Amenidades:{" "}
+          </Typography>
           {availableAmenities.map((availableAmenity) => {
-            return <p key={availableAmenity}>✔️ {availableAmenity}</p>;
+            return (
+              <Typography
+                color="#6d6970"
+                fontSize="20px"
+                display="block"
+                key={availableAmenity}
+              >
+                ✔️ {availableAmenity}
+              </Typography>
+            );
           })}
         </>
       )}

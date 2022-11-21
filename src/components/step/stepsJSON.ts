@@ -1,40 +1,40 @@
 import { Steps } from "./types";
 
+const APARTMENT_DESCRIPTION =
+  "Estas son algunas preguntas que nos permitirán conocer más de tu inmueble.";
+
+const ABOUT_YOU_DESCRIPTION =
+  "Queremos saber tus datos, o bien, de la persona que solicita la oferta.";
+
 export const STEPS_JSON = {
   [Steps.STEP1]: {
     title: "Sobre ti",
     order: 1,
-    description:
-      "Queremos saber tus datos, o bien, de la persona que solicita la oferta.",
+    description: ABOUT_YOU_DESCRIPTION,
   },
   [Steps.STEP2]: {
     title: "Sobre ti",
     order: 2,
-    description:
-      "Queremos saber tus datos, o bien, de la persona que solicita la oferta.",
+    description: ABOUT_YOU_DESCRIPTION,
   },
   [Steps.STEP3]: {
     title: "Ubicación",
     order: 3,
-    description:
-      "Estas son algunas preguntas que nos permitirán conocer más de tu inmueble y darte una experiencia que se ajuste a ti.",
+    description: APARTMENT_DESCRIPTION,
   },
   [Steps.STEP4]: {
-    title: "Número del piso de tu departamento",
+    title: "Características",
     order: 4,
-    description:
-      "Estas son algunas preguntas que nos permitirán conocer más de tu inmueble y darte una experiencia que se ajuste a ti.",
+    description: APARTMENT_DESCRIPTION,
   },
   [Steps.STEP5]: {
-    title: "Amenidades",
+    title: "Características",
     order: 5,
-    description:
-      "Estas son algunas preguntas que nos permitirán conocer más de tu inmueble y darte una experiencia que se ajuste a ti.",
+    description: APARTMENT_DESCRIPTION,
   },
   [Steps.STEP6]: {
     title: "Detalles",
     order: 6,
-    description:
-      "Te mostramos el resumen de los datos que nos has proporcionado.",
+    description: "Este es el resumen de los datos que nos has proporcionado.",
   },
 };
