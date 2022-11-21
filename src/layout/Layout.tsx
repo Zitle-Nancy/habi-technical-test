@@ -1,7 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { ContentComponent } from "../components/content";
 import { HeaderComponent } from "../components/header";
+import { Logo } from "../components/header/Logo";
 import { LeftPanelComponent } from "../components/leftPanel";
+import { Typography } from "../UI-components";
 import { Container, Footer } from "./styles";
 import { LayoutContextProvider } from "./useLayoutContext";
 
@@ -21,7 +23,12 @@ export const Layout = () => {
         <ContentComponent />
         {!HIDE_LEFT_PANEL && <LeftPanelComponent />}
       </LayoutContextProvider>
-      <Footer></Footer>
+      <Footer>
+        <Logo width="40px" height="40px" />
+        <Typography color="#272d4e" fontSize="16px">
+          2022 Habi® Todos los derechos reservados.
+        </Typography>
+      </Footer>
     </Container>
   );
 };

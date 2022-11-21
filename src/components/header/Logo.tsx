@@ -1,6 +1,6 @@
-export const Logo = () => {
+export const Logo = ({ width, height }: { width: string; height: string }) => {
   return (
-    <svg width="56" height="56" fill="none" viewBox="0 0 56 56">
+    <svg width={width} height={height} fill="none" viewBox="0 0 56 56">
       <path
         fill="#7C01FF"
         d="M50 42.561v-13.69a6.47 6.47 0 00-1.922-4.61L32.433 8.823a6.3 6.3 0 00-8.866 0L7.922 24.26A6.47 6.47 0 006 28.87v13.69C6 46.114 8.84 49 12.36 49h31.29c3.51 0 6.35-2.876 6.35-6.439z"
