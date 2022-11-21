@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 const EXTEND_LEFT_PANEL = css`
   grid-area: leftPanelExtended;
   width: 100%;
-  padding: 80px 28px 80px 24px;
+  padding: 2rem;
 `;
 
 export const LeftPanel = styled.aside<{ isExtended?: boolean }>(

@@ -7,8 +7,9 @@ import { Context } from "../../layout/useLayoutContext";
 import { Typography } from "../../UI-components";
 import { Button } from "../../UI-components/button";
 import { Checkbox } from "../../UI-components/checkbox";
+import { ModalComponent } from "../../UI-components/modal";
 import { AMENITIES_OPTIONS } from "./constants";
-import { Flex, Form, Wrapper } from "./styles";
+import { Flex, Form, FormContainer, Wrapper } from "./styles";
 import { IAmenitiesOptions } from "./types";
 
 export const AmenitiesForm = () => {
@@ -25,34 +26,37 @@ export const AmenitiesForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
-      <Typography
-        display="block"
-        margin="0 0 0.75rem 0"
-        fontWeight="400"
-        fontSize="20px"
-        color="#252129"
-      >
-        Selecciona si el departamento tiene alguna de las siguientes opciones:
-      </Typography>
-      <Wrapper>
-        <Flex>
-          {AMENITIES_OPTIONS.map(
-            (amenity: IAmenitiesOptions, index: number) => {
-              return (
-                <Checkbox
-                  register={register}
-                  name={AMENITIES_OPTIONS[index].id}
-                  registerName={AMENITIES_OPTIONS[index].name}
-                  key={amenity.name}
-                  textLabel={amenity.name}
-                />
-              );
-            }
-          )}
-        </Flex>
-        <Button type="submit" text="Ver resumen →" borderRadius="8px" />
-      </Wrapper>
-    </Form>
+    <FormContainer>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Typography
+          display="block"
+          margin="0 0 0.75rem 0"
+          fontWeight="400"
+          fontSize="20px"
+          color="#252129"
+        >
+          Selecciona si el departamento tiene alguna de las siguientes opciones:
+        </Typography>
+        <Wrapper>
+          <Flex>
+            {AMENITIES_OPTIONS.map(
+              (amenity: IAmenitiesOptions, index: number) => {
+                return (
+                  <Checkbox
+                    register={register}
+                    name={AMENITIES_OPTIONS[index].id}
+                    registerName={AMENITIES_OPTIONS[index].name}
+                    key={amenity.name}
+                    textLabel={amenity.name}
+                  />
+                );
+              }
+            )}
+          </Flex>
+          <Button type="submit" text="Ver resumen →" borderRadius="8px" />
+        </Wrapper>
+      </Form>
+      <ModalComponent />
+    </FormContainer>
   );
 };

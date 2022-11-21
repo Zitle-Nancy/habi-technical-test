@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import { UseFormRegister } from "react-hook-form";
-import { Typography } from "../Typography";
+import { Typography } from "../typography";
 
 import { Asterisk, Box, ErrorMessage, Flex, FormInput } from "./styles";
 
