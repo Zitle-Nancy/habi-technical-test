@@ -22,26 +22,20 @@ export const ModalComponent = () => {
   };
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  const openModal = () => {
-    setIsOpen(true);
+  const toggleModal = () => {
+    setIsOpen(!modalIsOpen);
   };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
   return (
     <ContainerModal>
-      <Button onClick={openModal} text={"Resumen"} width="100%" {...styles} />
+      <Button onClick={toggleModal} text="Resumen" width="100%" {...styles} />
       <Modal
         isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
+        onRequestClose={toggleModal}
         style={customStyles}
       >
         <Content />
         <Wrapper>
-          <CloseButton onClick={closeModal}>X</CloseButton>
+          <CloseButton onClick={toggleModal}>X</CloseButton>
         </Wrapper>
       </Modal>
     </ContainerModal>
