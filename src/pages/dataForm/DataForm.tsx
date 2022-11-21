@@ -15,7 +15,13 @@ export const DataForm = () => {
   const { pathname } = useLocation();
   const CUSTOM_WIDTH_FORM = pathname === "/fullname";
 
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const error = errors[INPUT_VALUES[pathname].name]?.message as string;
 
   const { userInformation, setUserInformation } = useContext(
     Context
@@ -37,13 +43,14 @@ export const DataForm = () => {
 
   return (
     <FormContainer>
-      <Form onSubmit={handleSubmit(onSubmit)} width={CUSTOM_WIDTH_FORM}>
+      <Form onSubmit={handleSubmit(onSubmit)} isCustomWidth={CUSTOM_WIDTH_FORM}>
         <Wrapper>
           <Input
             name={INPUT_VALUES[pathname].name}
             placeholder={INPUT_VALUES[pathname].placeholder}
             type="text"
             label={INPUT_VALUES[pathname].label}
+            error={error}
             {...formInputProps}
           />
           <Button type="submit" text="Sigamos →" borderRadius="8px" />

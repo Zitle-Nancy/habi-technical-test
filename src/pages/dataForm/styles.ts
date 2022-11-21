@@ -7,7 +7,7 @@ export const FormContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Form = styled.form<{ width?: boolean }>(
+export const Form = styled.form<{ isCustomWidth?: boolean }>(
   (props) => `
   margin: 0;
 
@@ -15,7 +15,7 @@ export const Form = styled.form<{ width?: boolean }>(
 
   @media (min-width: 900px) {
     margin: 1rem 5rem;
-    width: ${props.width ? "65%" : "85%"}
+    width: ${props.isCustomWidth ? "65%" : "85%"}
   }
 `
 );

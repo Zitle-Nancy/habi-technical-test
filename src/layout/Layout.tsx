@@ -21,7 +21,7 @@ export const Layout = () => {
         <ContentComponent />
         {!HIDE_LEFT_PANEL && <LeftPanelComponent />}
       </LayoutContextProvider>
-      <Footer>footer</Footer>
+      <Footer></Footer>
     </Container>
   );
 };
