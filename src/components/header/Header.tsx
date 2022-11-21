@@ -6,7 +6,7 @@ import { Logo } from "./Logo";
 export const HeaderComponent = () => {
   return (
     <Header>
-      <Logo />
+      <Logo width="70px" height="70px" />
       <Step />
     </Header>
   );

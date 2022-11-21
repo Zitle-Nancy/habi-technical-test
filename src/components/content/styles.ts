@@ -47,6 +47,7 @@ export const WelcomeContainer = styled.div`
 export const HeroImage = styled.img`
   width: auto;
   height: auto;
+  max-height: 350px;
 
   @media (min-width: 900px) {
     width: 500px;

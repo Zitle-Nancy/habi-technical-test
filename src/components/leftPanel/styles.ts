@@ -13,7 +13,7 @@ export const LeftPanel = styled.aside<{ isExtended?: boolean }>(
       ? EXTEND_LEFT_PANEL
       : `
   grid-area: leftPanel;
-  padding: 80px 28px 0 24px;
+  padding: 50px 28px 0 24px;
   width: 340px;`
   };
   
