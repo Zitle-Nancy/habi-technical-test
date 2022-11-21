@@ -4,9 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
-import { Button } from "../../UI-components/button";
-import { Input } from "../../UI-components/input";
-import { ModalComponent } from "../../UI-components/modal";
+import { Button, Input, ModalComponent } from "../../UI-components";
 import { INPUT_VALUES } from "./constants";
 import { Wrapper, Form, FormContainer } from "./styles";
 

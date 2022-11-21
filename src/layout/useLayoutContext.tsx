@@ -17,6 +17,9 @@ export const LayoutContextProvider = ({
 }) => {
   const [userInformation, setUserInformation] =
     useState<IUserInformation>(USER_INFORMATION);
+
+  localStorage.setItem("userInformation", JSON.stringify(userInformation));
+
   return (
     <Context.Provider value={{ userInformation, setUserInformation }}>
       {children}

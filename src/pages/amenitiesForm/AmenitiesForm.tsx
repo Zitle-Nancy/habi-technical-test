@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
-import { Typography } from "../../UI-components";
-import { Button } from "../../UI-components/button";
-import { Checkbox } from "../../UI-components/checkbox";
-import { ModalComponent } from "../../UI-components/modal";
+import {
+  Typography,
+  Button,
+  Checkbox,
+  ModalComponent,
+} from "../../UI-components";
 import { AMENITIES_OPTIONS } from "./constants";
 import { Flex, Form, FormContainer, Wrapper } from "./styles";
 import { IAmenitiesOptions } from "./types";

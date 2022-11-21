@@ -1,18 +1,18 @@
 import styled, { css } from "styled-components";
 
-const EXTEND_LEFT_PANEL = css`
-  grid-area: leftPanelExtended;
+const EXTEND_DETAILS_PANEL = css`
+  grid-area: detailsPanelExtended;
   width: 100%;
   padding: 2rem;
 `;
 
-export const LeftPanel = styled.aside<{ isExtended?: boolean }>(
+export const DetailsPanel = styled.aside<{ isExtended?: boolean }>(
   (props) => `
   ${
     props.isExtended
-      ? EXTEND_LEFT_PANEL
+      ? EXTEND_DETAILS_PANEL
       : `
-  grid-area: leftPanel;
+  grid-area: detailsPanel;
   padding: 50px 28px 0 24px;
   width: 340px;`
   };

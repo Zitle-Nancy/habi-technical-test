@@ -1,18 +1,18 @@
 import styled, { css } from "styled-components";
 interface IContainer {
-  hideLeftPanel: boolean;
-  extendLeftPanel: boolean;
+  hideDetailsPanel: boolean;
+  extendDetailsPanel: boolean;
 }
 
-const HIDE_LEFT_PANEL = css`
+const HIDE_DETAILS_PANEL = css`
   "header header header"
   "content content content"
   "footer footer footer";
 `;
 
-const SHOW_LEFT_PANEL = css`
-  "header header leftPanel"
-  "content content leftPanel"
+const SHOW_DETAILS_PANEL = css`
+  "header header detailsPanel"
+  "content content detailsPanel"
   "footer footer footer";
 `;
 
@@ -36,7 +36,7 @@ export const Container = styled.main<IContainer>(
   @media (min-width: 900px) {
     padding: 2rem 3.75rem;
     grid-template-areas: ${
-      props.hideLeftPanel ? `${HIDE_LEFT_PANEL}` : `${SHOW_LEFT_PANEL}`
+      props.hideDetailsPanel ? `${HIDE_DETAILS_PANEL}` : `${SHOW_DETAILS_PANEL}`
     };
 
     grid-template-columns: 1fr 6fr 4fr;
