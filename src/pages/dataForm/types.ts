@@ -1,8 +1,9 @@
 export interface IDataForm {
-  name: string; // este name es del input
+  name: string;
   placeholder: string;
   label: string;
   nextPath: string;
+  type?: string;
 }
 
 export interface IInputValues {

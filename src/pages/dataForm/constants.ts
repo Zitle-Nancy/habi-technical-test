@@ -12,6 +12,7 @@ export const INPUT_VALUES: IInputValues = {
     placeholder: "Correo electrónico",
     label: "Escribe tu correo electrónico",
     nextPath: "/address",
+    type: "email",
   },
   "/address": {
     name: "address",
@@ -24,5 +25,6 @@ export const INPUT_VALUES: IInputValues = {
     placeholder: "Número de piso",
     label: "Escribe el Nº de piso donde se encuentra el departamento",
     nextPath: "/amenities",
+    type: "number",
   },
 };

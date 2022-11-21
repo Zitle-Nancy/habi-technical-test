@@ -48,7 +48,7 @@ export const DataForm = () => {
           <Input
             name={INPUT_VALUES[pathname].name}
             placeholder={INPUT_VALUES[pathname].placeholder}
-            type="text"
+            type={INPUT_VALUES[pathname].type}
             label={INPUT_VALUES[pathname].label}
             error={error}
             {...formInputProps}
