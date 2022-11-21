@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const ButtonForm = styled.button`
+export const ButtonForm = styled.button<{ borderRadius?: string }>(
+  (props) => `
   background-color: #7c01ff;
   color: #ffffff;
   outline: none;
@@ -13,7 +14,7 @@ export const ButtonForm = styled.button`
   font-weight: 400;
   box-sizing: border-box;
   width: 75%;
-  border-radius: 100px;
+  border-radius: ${props.borderRadius ? props.borderRadius : "100px"};
 
   gap: 8px;
   height: 48px;
@@ -24,4 +25,5 @@ export const ButtonForm = styled.button`
   @media (min-width: 600px) {
     width: 45%;
   }
-`;
+`
+);
