@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
+import { Button } from "../../UI-components/button";
 import { Input } from "../../UI-components/input";
 import { INPUT_VALUES } from "./constants";
 
@@ -41,7 +42,7 @@ export const DataForm = () => {
         label={INPUT_VALUES[pathname].label}
         {...formInputProps}
       />
-      <button type="submit">Sigamos</button>
+      <Button type="submit" text="Sigamos →" />
     </form>
   );
 };
