@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 import { IUserInfoContext } from "../../layout/types";
 import { Context } from "../../layout/useLayoutContext";
@@ -14,11 +15,13 @@ export const AmenitiesForm = () => {
   const { userInformation, setUserInformation } = useContext(
     Context
   ) as IUserInfoContext;
+  const navigate = useNavigate();
 
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data: any) => {
     setUserInformation({ ...userInformation, amenities: data });
+    navigate("/details");
   };
 
   return (

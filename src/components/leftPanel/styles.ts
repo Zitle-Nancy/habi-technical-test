@@ -1,21 +1,28 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const LeftPanel = styled.aside`
+const EXTEND_LEFT_PANEL = css`
+  grid-area: leftPanelExtended;
+  width: 100%;
+  padding: 80px 28px 80px 24px;
+`;
+
+export const LeftPanel = styled.aside<{ isExtended?: boolean }>(
+  (props) => `
+  ${
+    props.isExtended
+      ? EXTEND_LEFT_PANEL
+      : `
   grid-area: leftPanel;
-
-  padding: 80px 28px 0px 24px;
-  display: block;
-  grid-column: 10 / span 2;
-  width: 340px;
-  height: 100vh;
+  padding: 80px 28px 0 24px;
+  width: 340px;`
+  };
+  
   background: #fcfcfc;
-  position: fixed;
-  top: 0px;
-  right: 0px;
 
   display: none;
 
   @media (min-width: 600px) {
     display: block;
   }
-`;
+`
+);

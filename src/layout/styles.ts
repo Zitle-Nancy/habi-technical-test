@@ -1,6 +1,23 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+interface IContainer {
+  hideLeftPanel: boolean;
+  extendLeftPanel: boolean;
+}
 
-export const Container = styled.main`
+const HIDE_LEFT_PANEL = css`
+  "header header header"
+  "content content content"
+  "footer footer footer";
+`;
+
+const SHOW_LEFT_PANEL = css`
+  "header header leftPanel"
+  "content content leftPanel"
+  "footer footer leftPanel";
+`;
+
+export const Container = styled.main<IContainer>(
+  (props) => `
   padding: 2rem 3.75rem;
   box-sizing: border-box;
   display: grid;
@@ -17,15 +34,15 @@ export const Container = styled.main`
   grid-template-rows: 1fr 5fr 2fr;
 
   @media (min-width: 600px) {
-    grid-template-areas:
-      "header header leftPanel"
-      "content content leftPanel"
-      "footer footer leftPanel";
+    grid-template-areas: ${
+      props.hideLeftPanel ? `${HIDE_LEFT_PANEL}` : `${SHOW_LEFT_PANEL}`
+    };
 
     grid-template-columns: 1fr 6fr 4fr;
     grid-template-rows: 1fr 5fr 1fr;
   }
-`;
+`
+);
 
 export const Footer = styled.footer`
   grid-area: footer;
