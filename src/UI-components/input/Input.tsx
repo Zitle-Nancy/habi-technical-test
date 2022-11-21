@@ -1,4 +1,3 @@
-import { ChangeEvent, useState } from "react";
 import { UseFormRegister } from "react-hook-form";
 import { Typography } from "../typography";
 
@@ -12,6 +11,7 @@ interface IFormInput {
   register?: UseFormRegister<any> | null;
   defaultValue?: string;
   required?: boolean;
+  error: string;
 }
 
 export const Input = ({
@@ -21,8 +21,8 @@ export const Input = ({
   name,
   register = null,
   required = false,
+  error,
 }: IFormInput) => {
-  // const [value, setValue] = useState("");
   return (
     <Box>
       <Typography
@@ -44,14 +44,9 @@ export const Input = ({
           {...(register &&
             register(name, {
               required: { value: required, message: "Campo requerido" },
-              // onChange: (e: ChangeEvent<HTMLInputElement>) => {
-              //   console.log(e, "event");
-
-              //   // setValue(e.target.value);
-              // },
             }))}
         />
-        {false && <ErrorMessage>Error</ErrorMessage>}
+        {error && <ErrorMessage>{error}</ErrorMessage>}
       </Flex>
     </Box>
   );
